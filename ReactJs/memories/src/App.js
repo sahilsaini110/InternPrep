@@ -1,23 +1,28 @@
-import axios from 'axios'
 import {useState, useEffect} from 'react'
+import axios from 'axios'
+import Card from '../src/components/Card'
 
 const App = () => {
-    const [rest, setRest] = useState(null)
+    const [rests, setRests] = useState(null)
 
     const fetchData = async () =>{
-        const restData = await axios.get('https://silver-space-bassoon-rxrp76pqxx5cw5v5-8000.app.github.dev/')
-        setrest(restData)
+        const restData = await axios.get('http://localhost:8000/')
+        const data = Object.keys(restData.data.data).map(rest => restData.data.data[rest])
+        setRests(data)
     }
 
     useEffect(()=>{
         fetchData()
     }, [])
 
-    console.log(rest)
+    console.log(rests)
 
     return (
         <div className = "App">
-            hello
+            <h1> Memories</h1>
+            <div className='rest-feed'>
+               {rests?.map(rest => <Card key = {rest.id} rest = {rest} />)} 
+            </div>
         </div>
     )
 }
