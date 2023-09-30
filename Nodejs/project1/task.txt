@@ -1,0 +1,18 @@
+rest api - json
+
+get /users - list all users
+
+get /user/1 -get the user with id =1
+
+dynamic path parameters
+get /api/users/:id
+:k baad ka mtlb h ye dynamic h
+
+
+post /users - create user
+
+patch /user/1 - edit the user with id 1
+
+delete /user/2 - delete user with id 2
+
+using mokaro for generating fake data.

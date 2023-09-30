@@ -1,0 +1,11 @@
+design a url shortner swrvice that taes in
+aa valid url nd return a shortened url,
+redirecting the user to the previously provided url.
+
+also keep track of total visits/clicks on the url.
+
+routes
+
+post/url -
+get/:id -
+get/url/analytics/:id -

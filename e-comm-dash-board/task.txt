@@ -1,0 +1,13 @@
+a dashboard where we manage all products of a ecommerce company
+pass data from one api to another
+managing multiple api, localstorage
+
+
+setup
+login, registger
+product listing
+add new productsearch productupdate roduct
+hard delete, soft deletedorting, pagination, filter
+categories
+security token
+routing
