@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <!-- backend se jo data aa rha h vo locals m hota h  -->
+    <h1>Url-Shortener</h1>
+    <% if(locals.id){ %>
+        <p> URL GENERATED : http://localhost:8001/url/<%= id %> </p>
+    <% }  %>
+    <div>
+        <form method="post" action="/url">
+            <label for="url">Enter the long url: </label><br />
+            <input type="text" placeholder="" name="url"/>
+            <!-- ye jo name h ye vahi h jo hum body.url m use kr rhe h to ye dekh kr hi rakh na h -->
+            <button type="submit">Short</button>
+        </form>
+    </div>
+    <div>
+        <% if (locals.urls){ %>
+        <table>
+           <thead>
+            <th>s.no</th>
+            <th>shortid</th>
+            <th>rediret</th>
+            <th>clicks</th>
+           </thead>
+           <tbody>
+            <% urls.forEach((url, index)=>{ %>
+                <tr>
+                    <td> <%= index+1 %> </td>
+                    <td> <%= url.shortId %> </td>
+                    <td> <%= url.redirectUrl %> </td>
+                    <td> <%=  url.visHistory.lenght %> </td>
+                </tr>
+                <% })} %>
+           </tbody>
+        </table>
+    </div>
+</body>
+</html>
