@@ -15,3 +15,10 @@ static files setup krna :> means images, stylesheets, frontendjs setup krna;
 2) create 3 folder inside it images, stylesheets, javascripts.
 3) configure the express static
 4) understand the path  
+
+
+
+## authentication  
+#### types :-
+* statefull -> which maintains state or data on server side.
+* stateless -> which has no state.
