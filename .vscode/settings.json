@@ -1,5 +1,9 @@
 {
     "editor.tabCompletion": "on",
     "diffEditor.codeLens": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "files.associations": {
+        "iostream": "cpp",
+        "random": "cpp"
+    }
 }
